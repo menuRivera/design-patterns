@@ -1,0 +1,10 @@
+#!/usr/bin/bash
+
+echo "Compiling..."
+g++ -c main.cpp Person.cpp PersonBuilder.cpp
+
+echo "Linking together..."
+g++ main.o Person.o PersonBuilder.o -o facets
+
+echo "Running..."
+./facets
