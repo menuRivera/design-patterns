@@ -1,9 +1,6 @@
-#include <iostream>
-#include <memory>
-
 #include "DrinkFactory.hpp"
 #include "HotDrink.hpp"
-#include "HotDrinkFactory.hpp"
+#include <memory>
 
 unique_ptr<HotDrink> make_drink(string type) {
   unique_ptr<HotDrink> drink;
