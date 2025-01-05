@@ -7,6 +7,11 @@
  * Beware memory leaks!
  */
 
+#include <cassert>
+#include <iostream>
+
+using namespace std;
+
 struct Point {
   int x{0}, y{0};
 
@@ -28,4 +33,9 @@ struct Line {
 int main() {
   Line line{new Point{1, 5}, new Point{6, 8}};
   Line copied = line.deep_copy();
+  copied.start->y = 1;
+
+  assert(line.start->y != copied.start->y);
+
+  cout << "Success" << endl;
 }
