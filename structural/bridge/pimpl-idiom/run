@@ -1,0 +1,10 @@
+#!/usr/bin/bash
+
+echo "Compiling..."
+g++ -c main.cpp Person.cpp 
+
+echo "Linking together..."
+g++ main.o Person.o -o a.out
+
+echo "Running..."
+./a.out
