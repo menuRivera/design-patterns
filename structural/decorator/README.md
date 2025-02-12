@@ -9,3 +9,15 @@ Facilitates the addition of behaviours to individual objects.
 - Two options:
     - Aggregate the decorated object
     - Inherit from the decorated object
+
+## Dynamic decorator 
+- Keeps a reference to the decorated object(s)
+```
+ColoredShape{Square{}}
+```
+
+## Static decorator
+- Uses mixin inheritance
+```
+ColoredShape<Square>
+```
