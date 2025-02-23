@@ -46,6 +46,7 @@ struct Coach {
   Coach(Game &game) : game(game) {
     game.events.connect([](EventData *e) {
       PlayerScoredData *ps = dynamic_cast<PlayerScoredData *>(e);
+      ps->print();
       if (ps && ps->goals_scored_so_far < 3) {
         cout << "coach says: well done, " << ps->player_name << "!\n";
       } else {
